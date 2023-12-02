@@ -1,18 +1,16 @@
 task2=open("task2.txt","r")
-wordsToRemove=[" ","Game"]
-list_of_sequences=[]
-listForID=[]
+words_to_remove=[" ","Game"]
 score=0
 blue=[]
 green=[]
 red=[]
 for line in task2:
-  for i in wordsToRemove:
+  for i in words_to_remove:
     line=line.replace(i,"")
     #removes unnecessary spaces and detail from the line
-  listForID=line.split(":")
+  list_for_ID=line.split(":")
   #filters ID from rest of line
-  list_of_sequences=listForID[1].split(";")
+  list_of_sequences=list_for_ID[1].split(";")
   #filters separate lists of scores
   for sequence in list_of_sequences:
     unfiltered_scores=sequence.split(",")
@@ -29,7 +27,7 @@ for line in task2:
   blue.clear()
   red.clear()
   green.clear()
-  listForID.clear()
+  list_for_ID.clear()
   list_of_sequences.clear()
   #clears lists, ready for next iteration
 print(score)
