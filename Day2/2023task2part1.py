@@ -1,6 +1,6 @@
 task2=open("task2.txt","r")
 wordsToRemove=[" ","Game"]
-lineArray=[]
+list_of_sequences=[]
 listForID=[]
 score=0
 impossible_score=False
@@ -10,9 +10,9 @@ for line in task2:
     #removes unnecessary spaces and detail from the line
   listForID=line.split(":")
   #filters ID from rest of line
-  lineArray=listForID[1].split(";")
+  list_of_sequences=listForID[1].split(";")
   #filters separate lists of scores
-  for sequence in lineArray:
+  for sequence in list_of_sequences:
     scores=sequence.split(",")
     #finds individual scores by further filtering
     for sepScores in scores:
@@ -32,7 +32,7 @@ for line in task2:
     score+=int(listForID[0])
   scores.clear() 
   listForID.clear()
-  lineArray.clear() 
+  list_of_sequences.clear() 
   impossible_score=False
   #clears lists and resets the boolean value, ready for next iteration
 print(score)
