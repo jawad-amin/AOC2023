@@ -34,6 +34,7 @@ for line in task2:
   impossible_score=False
   #clears lists and resets the boolean value, ready for next iteration
 print(score)
+task2.close()
 
 
     
