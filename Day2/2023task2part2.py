@@ -31,3 +31,4 @@ for line in task2:
   list_of_sequences.clear()
   #clears lists, ready for next iteration
 print(score)
+task2.close()
