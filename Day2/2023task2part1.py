@@ -13,17 +13,17 @@ for line in task2:
   for sequence in list_of_sequences:
     scores=sequence.split(",")
     #finds individual scores by further filtering
-    for sepScores in scores:
-      if sepScores.find("green")!=-1 :
-        if int(sepScores[:sepScores.find("green")])>13:
+    for separate_scores in scores:
+      if separate_scores.find("green")!=-1 :
+        if int(separate_scores[:separate_scores.find("green")])>13:
           impossible_score=True
           break
-      elif sepScores.find("red")!=-1 :
-        if int(sepScores[:sepScores.find("red")])>12:
+      elif separate_scores.find("red")!=-1 :
+        if int(separate_scores[:separate_scores.find("red")])>12:
           impossible_score=True
           break
-      elif sepScores.find("blue")!=-1:
-        if int(sepScores[:sepScores.find("blue")])>14:
+      elif separate_scores.find("blue")!=-1:
+        if int(separate_scores[:separate_scores.find("blue")])>14:
           impossible_score=True
           break
   if impossible_score==False:

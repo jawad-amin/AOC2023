@@ -15,13 +15,13 @@ for line in task2:
   for sequence in list_of_sequences:
     unfiltered_scores=sequence.split(",")
     #finds individual scores by further filtering
-    for sepScores in unfiltered_scores: 
-      if sepScores.find("green")!=-1 :
-        green.append(int(sepScores[:sepScores.find("green")]))
-      elif sepScores.find("red")!=-1 :
-        red.append(int(sepScores[:sepScores.find("red")]))
-      elif sepScores.find("blue")!=-1:
-        blue.append(int(sepScores[:sepScores.find("blue")]))
+    for separate_scores in unfiltered_scores: 
+      if separate_scores.find("green")!=-1 :
+        green.append(int(separate_scores[:separate_scores.find("green")]))
+      elif separate_scores.find("red")!=-1 :
+        red.append(int(separate_scores[:separate_scores.find("red")]))
+      elif separate_scores.find("blue")!=-1:
+        blue.append(int(separate_scores[:separate_scores.find("blue")]))
     unfiltered_scores.clear()
   score+=max(blue)*max(red)*max(green)
   blue.clear()
